@@ -9,17 +9,343 @@
 }
 </style>
 <br>
-<div id="button_m" style="display: flex; justify-content: center;"> </div>
-<div id="button_b" style="display: flex; justify-content: center;"> </div>
+<H2 style="display: flex; justify-content: center;"> Insert default values by click one of the buttons:</H2>
+<div>
+    <p id="button_m" style="display: flex; justify-content: center;"></p>
+    <p id="button_b" style="display: flex; justify-content: center;"> </p>
+</div>
 <br>
+<H3 style="display: flex; justify-content: center;"> Or insert data about your patient using the fields below</H3>
+
+<!--<div class="container">-->
+<!--    <div class="row mt-4">-->
+<!--        <div class="col-md-8 offset-md-2">-->
+<!--            <div class="card shadow">-->
+<!--                <div class="card-body">-->
+<!--                    <form method="POST">-->
+<!--                        {% csrf_token %}-->
+<!--                        {{ form }}-->
+<!--                        <input class="btn btn-info" type="submit" value="Make Prediction">-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="container">
     <div class="row mt-4">
         <div class="col-md-8 offset-md-2">
             <div class="card shadow">
                 <div class="card-body">
+
                     <form method="POST">
-                        {% csrf_token %}
-                        {{ form }}
+
+                        <input type="hidden" name="csrfmiddlewaretoken" value="KsNTBl1i78Bq14VnF5laitRkT8YNbdiVCrLFtyZiHcH6eLpzpxZTouDNAa67AgW5">
+                       {% csrf_token %}
+
+                        <tr> <p>
+                            <th><label for="id_radius_mean">Radius mean:</label></th>
+                            <td>
+
+                              <input type="text" name="radius_mean" maxlength="10" required id="id_radius_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_texture_mean">Texture mean:</label></th>
+                            <td>
+
+                              <input type="text" name="texture_mean" maxlength="10" required id="id_texture_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_perimeter_mean">Perimeter mean:</label></th>
+                            <td>
+
+                              <input type="text" name="perimeter_mean" maxlength="10" required id="id_perimeter_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_area_mean">Area mean:</label></th>
+                            <td>
+
+                              <input type="text" name="area_mean" maxlength="10" required id="id_area_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_smoothness_mean">Smoothness mean:</label></th>
+                            <td>
+
+                              <input type="text" name="smoothness_mean" maxlength="10" required id="id_smoothness_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_compactness_mean">Compactness mean:</label></th>
+                            <td>
+
+                              <input type="text" name="compactness_mean" maxlength="10" required id="id_compactness_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_concavity_mean">Concavity mean:</label></th>
+                            <td>
+
+                              <input type="text" name="concavity_mean" maxlength="10" required id="id_concavity_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_concave_points_mean">Concave points mean:</label></th>
+                            <td>
+
+                              <input type="text" name="concave_points_mean" maxlength="10" required id="id_concave_points_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_symmetry_mean">Symmetry mean:</label></th>
+                            <td>
+
+                              <input type="text" name="symmetry_mean" maxlength="10" required id="id_symmetry_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_fractal_dimension_mean">Fractal dimension mean:</label></th>
+                            <td>
+
+                              <input type="text" name="fractal_dimension_mean" maxlength="10" required id="id_fractal_dimension_mean">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_radius_se">Radius se:</label></th>
+                            <td>
+
+                              <input type="text" name="radius_se" maxlength="10" required id="id_radius_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_texture_se">Texture se:</label></th>
+                            <td>
+
+                              <input type="text" name="texture_se" maxlength="10" required id="id_texture_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_perimeter_se">Perimeter se:</label></th>
+                            <td>
+
+                              <input type="text" name="perimeter_se" maxlength="10" required id="id_perimeter_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_area_se">Area se:</label></th>
+                            <td>
+
+                              <input type="text" name="area_se" maxlength="10" required id="id_area_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_smoothness_se">Smoothness se:</label></th>
+                            <td>
+
+                              <input type="text" name="smoothness_se" maxlength="10" required id="id_smoothness_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_compactness_se">Compactness se:</label></th>
+                            <td>
+
+                              <input type="text" name="compactness_se" maxlength="10" required id="id_compactness_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_concavity_se">Concavity se:</label></th>
+                            <td>
+
+                              <input type="text" name="concavity_se" maxlength="10" required id="id_concavity_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_concave_points_se">Concave points se:</label></th>
+                            <td>
+
+                              <input type="text" name="concave_points_se" maxlength="10" required id="id_concave_points_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_symmetry_se">Symmetry se:</label></th>
+                            <td>
+
+                              <input type="text" name="symmetry_se" maxlength="10" required id="id_symmetry_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_fractal_dimension_se">Fractal dimension se:</label></th>
+                            <td>
+
+                              <input type="text" name="fractal_dimension_se" maxlength="10" required id="id_fractal_dimension_se">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_radius_worst">Radius worst:</label></th>
+                            <td>
+
+                              <input type="text" name="radius_worst" maxlength="10" required id="id_radius_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_texture_worst">Texture worst:</label></th>
+                            <td>
+
+                              <input type="text" name="texture_worst" maxlength="10" required id="id_texture_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_perimeter_worst">Perimeter worst:</label></th>
+                            <td>
+
+                              <input type="text" name="perimeter_worst" maxlength="10" required id="id_perimeter_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_area_worst">Area worst:</label></th>
+                            <td>
+
+                              <input type="text" name="area_worst" maxlength="10" required id="id_area_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_smoothness_worst">Smoothness worst:</label></th>
+                            <td>
+
+                              <input type="text" name="smoothness_worst" maxlength="10" required id="id_smoothness_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_compactness_worst">Compactness worst:</label></th>
+                            <td>
+
+                              <input type="text" name="compactness_worst" maxlength="10" required id="id_compactness_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_concavity_worst">Concavity worst:</label></th>
+                            <td>
+
+                              <input type="text" name="concavity_worst" maxlength="10" required id="id_concavity_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_concave_points_worst">Concave points worst:</label></th>
+                            <td>
+
+                              <input type="text" name="concave_points_worst" maxlength="10" required id="id_concave_points_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                          <tr> <p>
+                            <th><label for="id_symmetry_worst">Symmetry worst:</label></th>
+                            <td>
+
+                              <input type="text" name="symmetry_worst" maxlength="10" required id="id_symmetry_worst">
+
+
+                            </td>
+                          </tr> </p>
+
+                                                <p>
+                          <tr> <p>
+                            <th><label for="id_fractal_dimension_worst">Fractal dimension worst:</label></th>
+                            <td>
+
+                              <input type="text" name="fractal_dimension_worst" maxlength="10" required id="id_fractal_dimension_worst">
+
+
+
+
+                            </td>
+                          </tr> </p>
+                        </p>
                         <input class="btn btn-info" type="submit" value="Make Prediction">
                     </form>
                 </div>
