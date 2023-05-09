@@ -8,21 +8,80 @@
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Height</th>
-                    <th scope="col">Sex</th>
-                    <th scope="col">Prediction</th>
+                    <th scope="col">id </th>
+                    <th scope="col">diagnosis</th>
+                    <th scope="col">radius_mean</th>
+                    <th scope="col">texture_mean</th>
+                    <th scope="col">perimeter_mean</th>
+<!--                    <th scope="col">area_mean</th>-->
+<!--                    <th scope="col">smoothness_mean</th>-->
+<!--                    <th scope="col">compactness_mean</th>-->
+<!--                    <th scope="col">concavity_mean</th>-->
+<!--                    <th scope="col">concave_points_mean</th>-->
+<!--                    <th scope="col">symmetry_mean</th>-->
+<!--                    <th scope="col">fractal_dimension_mean</th>-->
+<!--                    <th scope="col">radius_se</th>-->
+<!--                    <th scope="col">texture_se</th>-->
+<!--                    <th scope="col">perimeter_se</th>-->
+<!--                    <th scope="col">area_se</th>-->
+<!--                    <th scope="col">smoothness_se</th>-->
+<!--                    <th scope="col">compactness_se</th>-->
+<!--                    <th scope="col">concavity_se</th>-->
+<!--                    <th scope="col">concave_points_se</th>-->
+<!--                    <th scope="col">symmetry_se</th>-->
+<!--                    <th scope="col">fractal_dimension_se</th>-->
+<!--                    <th scope="col">radius_worst</th>-->
+<!--                    <th scope="col">texture_worst</th>-->
+<!--                    <th scope="col">perimeter_worst</th>-->
+<!--                    <th scope="col">area_worst</th>-->
+<!--                    <th scope="col">smoothness_worst</th>-->
+<!--                    <th scope="col">compactness_worst</th>-->
+<!--                    <th scope="col">concavity_worst</th>-->
+<!--                    <th scope="col">concave_points_worst</th>-->
+<!--                    <th scope="col">symmetry_worst</th>-->
+<!--                    <th scope="col">fractal_dimension_worst</th>-->
+                    <th scope="col">date</th>
+
                   </tr>
                 </thead>
                 <tbody>
                   {% for data in predicted_sports %}
                   <tr>
-                    <th scope="row">{{ data.name }}</th>
-                    <td>{{ data.age }}</td>
-                    <td>{{ data.height }}</td>
-                    <td>{{ data.sex }}</td>
-                    <td>{{ data.predictions }}</td>
+
+                    <td>{{ data.id   }}</td>
+                    <td>{{ data.diagnosis  }}</td>
+                    <td>{{ data.radius_mean  }}</td>
+                    <td>{{ data.texture_mean  }}</td>
+                    <td>{{ data.perimeter_mean  }}</td>
+<!--                    <td>{{ data.area_mean  }}</td>-->
+<!--                    <td>{{ data.smoothness_mean  }}</td>-->
+<!--                    <td>{{ data.compactness_mean  }}</td>-->
+<!--                    <td>{{ data.concavity_mean  }}</td>-->
+<!--                    <td>{{ data.concave_points_mean  }}</td>-->
+<!--                    <td>{{ data.symmetry_mean  }}</td>-->
+<!--                    <td>{{ data.fractal_dimension_mean  }}</td>-->
+<!--                    <td>{{ data.radius_se  }}</td>-->
+<!--                    <td>{{ data.texture_se  }}</td>-->
+<!--                    <td>{{ data.perimeter_se  }}</td>-->
+<!--                    <td>{{ data.area_se  }}</td>-->
+<!--                    <td>{{ data.smoothness_se  }}</td>-->
+<!--                    <td>{{ data.compactness_se  }}</td>-->
+<!--                    <td>{{ data.concavity_se  }}</td>-->
+<!--                    <td>{{ data.concave_points_se  }}</td>-->
+<!--                    <td>{{ data.symmetry_se  }}</td>-->
+<!--                    <td>{{ data.fractal_dimension_se  }}</td>-->
+<!--                    <td>{{ data.radius_worst  }}</td>-->
+<!--                    <td>{{ data.texture_worst  }}</td>-->
+<!--                    <td>{{ data.perimeter_worst  }}</td>-->
+<!--                    <td>{{ data.area_worst  }}</td>-->
+<!--                    <td>{{ data.smoothness_worst  }}</td>-->
+<!--                    <td>{{ data.compactness_worst  }}</td>-->
+<!--                    <td>{{ data.concavity_worst  }}</td>-->
+<!--                    <td>{{ data.concave_points_worst  }}</td>-->
+<!--                    <td>{{ data.symmetry_worst  }}</td>-->
+<!--                    <td>{{ data.fractal_dimension_worst  }}</td>-->
+                    <td>{{ data.date  }}</td>
+
                   </tr>
                   {% endfor %}
                 </tbody>

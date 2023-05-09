@@ -1,7 +1,17 @@
 {% extends 'partials/base.html' %}
 {% block title %}Home{% endblock %}
-{% load crispy_forms_tags %}
 {% block content  %}
+
+
+<style>
+    #button_b {
+  border-color: yellow;
+}
+</style>
+<br>
+<div id="button_m" style="display: flex; justify-content: center;"> </div>
+<div id="button_b" style="display: flex; justify-content: center;"> </div>
+<br>
 <div class="container">
     <div class="row mt-4">
         <div class="col-md-8 offset-md-2">
@@ -9,7 +19,7 @@
                 <div class="card-body">
                     <form method="POST">
                         {% csrf_token %}
-                        {{ form|crispy }}
+                        {{ form }}
                         <input class="btn btn-info" type="submit" value="Make Prediction">
                     </form>
                 </div>
