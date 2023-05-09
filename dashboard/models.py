@@ -1,12 +1,8 @@
 import random
 
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
-from sklearn.tree import DecisionTreeClassifier
-import joblib
 import requests
 import json
-import re
 
 
 class Data(models.Model):
