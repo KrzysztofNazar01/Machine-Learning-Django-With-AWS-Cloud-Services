@@ -1,119 +1,110 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<title>{% block title %} {% endblock %}</title>
+	</head>
+	<body onload="show_button_m(); show_button_b()">
+		{% include 'partials/nav.html' %}
+		{% block content  %}
+		{% endblock %}
+		<!-- Optional JavaScript; choose one of the two! -->
+		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+			-->
+		<script>
+			var show_button_m = function(){
+			  var button = document.createElement('button');
+			  button.innerHTML = 'M values';
+			  button.style.backgroundColor = "magenta"
+			  button.onclick = function(){
+			  document.getElementById("id_radius_mean").value = "17.99";
+			  document.getElementById("id_texture_mean").value = "10.38";
+			  document.getElementById("id_perimeter_mean").value = "122.8";
+			  document.getElementById("id_area_mean").value = "1001";
+			  document.getElementById("id_smoothness_mean").value = "0.1184";
+			  document.getElementById("id_compactness_mean").value = "0.2776";
+			  document.getElementById("id_concavity_mean").value = "0.3001";
+			  document.getElementById("id_concave_points_mean").value = "0.1471";
+			  document.getElementById("id_symmetry_mean").value = "0.2419";
+			  document.getElementById("id_fractal_dimension_mean").value = "0.07871";
+			  document.getElementById("id_radius_se").value = "1.095";
+			  document.getElementById("id_texture_se").value = "0.9053";
+			  document.getElementById("id_perimeter_se").value = "8.589";
+			  document.getElementById("id_area_se").value = "153.4";
+			  document.getElementById("id_smoothness_se").value = "0.006399";
+			  document.getElementById("id_compactness_se").value = "0.04904";
+			  document.getElementById("id_concavity_se").value = "0.05373";
+			  document.getElementById("id_concave_points_se").value = "0.01587";
+			  document.getElementById("id_symmetry_se").value = "0.03003";
+			  document.getElementById("id_fractal_dimension_se").value = "0.006193";
+			  document.getElementById("id_radius_worst").value = "25.38";
+			  document.getElementById("id_texture_worst").value = "17.33";
+			  document.getElementById("id_perimeter_worst").value = "184.6";
+			  document.getElementById("id_area_worst").value = "2019";
+			  document.getElementById("id_smoothness_worst").value = "0.1622";
+			  document.getElementById("id_compactness_worst").value = "0.6656";
+			  document.getElementById("id_concavity_worst").value = "0.7119";
+			  document.getElementById("id_concave_points_worst").value = "0.2654";
+			  document.getElementById("id_symmetry_worst").value = "0.4601";
+			  document.getElementById("id_fractal_dimension_worst").value = "0.1189";
+			  };
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+			  // set the place of the button
+			  document.getElementById('button_m').appendChild(button);
+			};
 
-    <title>{% block title %} {% endblock %}</title>
-  </head>
-  <body onload="show_button_m(); show_button_b()">
-    {% include 'partials/nav.html' %}
+			var show_button_b = function(){
+			  var button = document.createElement('button');
+			  button.innerHTML = 'B values';
+			  button.style.backgroundColor = "lightblue"
+			  button.onclick = function(){
+			  document.getElementById("id_radius_mean").value = "8.196";
+			  document.getElementById("id_texture_mean").value = "16.84";
+			  document.getElementById("id_perimeter_mean").value = "51.71";
+			  document.getElementById("id_area_mean").value = "201.9";
+			  document.getElementById("id_smoothness_mean").value = "0.086";
+			  document.getElementById("id_compactness_mean").value = "0.05943";
+			  document.getElementById("id_concavity_mean").value = "0.01588";
+			  document.getElementById("id_concave_points_mean").value = "0.005917";
+			  document.getElementById("id_symmetry_mean").value = "0.1769";
+			  document.getElementById("id_fractal_dimension_mean").value = "0.06503";
+			  document.getElementById("id_radius_se").value = "0.1563";
+			  document.getElementById("id_texture_se").value = "0.9567";
+			  document.getElementById("id_perimeter_se").value = "1.094";
+			  document.getElementById("id_area_se").value = "8.205";
+			  document.getElementById("id_smoothness_se").value = "0.008968";
+			  document.getElementById("id_compactness_se").value = "0.01646";
+			  document.getElementById("id_concavity_se").value = "0.01588";
+			  document.getElementById("id_concave_points_se").value = "0.005917";
+			  document.getElementById("id_symmetry_se").value = "0.02574";
+			  document.getElementById("id_fractal_dimension_se").value = "0.002582";
+			  document.getElementById("id_radius_worst").value = "8.964";
+			  document.getElementById("id_texture_worst").value = "21.96";
+			  document.getElementById("id_perimeter_worst").value = "57.26";
+			  document.getElementById("id_area_worst").value = "242.2";
+			  document.getElementById("id_smoothness_worst").value = "0.1297";
+			  document.getElementById("id_compactness_worst").value = "0.1357";
+			  document.getElementById("id_concavity_worst").value = "0.0688";
+			  document.getElementById("id_concave_points_worst").value = "0.02564";
+			  document.getElementById("id_symmetry_worst").value = "0.3105";
+			  document.getElementById("id_fractal_dimension_worst").value = "0.07409";
 
-    {% block content  %}
-    
-    {% endblock %}
+			  };
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    -->
-
-  <script>
-    var show_button_m = function(){
-      var button = document.createElement('button');
-      button.innerHTML = 'M values';
-      button.style.backgroundColor = "magenta"
-      button.onclick = function(){
-      document.getElementById("id_radius_mean").value = "17.99";
-      document.getElementById("id_texture_mean").value = "10.38";
-      document.getElementById("id_perimeter_mean").value = "122.8";
-      document.getElementById("id_area_mean").value = "1001";
-      document.getElementById("id_smoothness_mean").value = "0.1184";
-      document.getElementById("id_compactness_mean").value = "0.2776";
-      document.getElementById("id_concavity_mean").value = "0.3001";
-      document.getElementById("id_concave_points_mean").value = "0.1471";
-      document.getElementById("id_symmetry_mean").value = "0.2419";
-      document.getElementById("id_fractal_dimension_mean").value = "0.07871";
-      document.getElementById("id_radius_se").value = "1.095";
-      document.getElementById("id_texture_se").value = "0.9053";
-      document.getElementById("id_perimeter_se").value = "8.589";
-      document.getElementById("id_area_se").value = "153.4";
-      document.getElementById("id_smoothness_se").value = "0.006399";
-      document.getElementById("id_compactness_se").value = "0.04904";
-      document.getElementById("id_concavity_se").value = "0.05373";
-      document.getElementById("id_concave_points_se").value = "0.01587";
-      document.getElementById("id_symmetry_se").value = "0.03003";
-      document.getElementById("id_fractal_dimension_se").value = "0.006193";
-      document.getElementById("id_radius_worst").value = "25.38";
-      document.getElementById("id_texture_worst").value = "17.33";
-      document.getElementById("id_perimeter_worst").value = "184.6";
-      document.getElementById("id_area_worst").value = "2019";
-      document.getElementById("id_smoothness_worst").value = "0.1622";
-      document.getElementById("id_compactness_worst").value = "0.6656";
-      document.getElementById("id_concavity_worst").value = "0.7119";
-      document.getElementById("id_concave_points_worst").value = "0.2654";
-      document.getElementById("id_symmetry_worst").value = "0.4601";
-      document.getElementById("id_fractal_dimension_worst").value = "0.1189";
-      };
-
-      // set the place of the button
-      document.getElementById('button_m').appendChild(button);
-    };
-
-    var show_button_b = function(){
-      var button = document.createElement('button');
-      button.innerHTML = 'B values';
-      button.style.backgroundColor = "lightblue"
-      button.onclick = function(){
-      document.getElementById("id_radius_mean").value = "8.196";
-      document.getElementById("id_texture_mean").value = "16.84";
-      document.getElementById("id_perimeter_mean").value = "51.71";
-      document.getElementById("id_area_mean").value = "201.9";
-      document.getElementById("id_smoothness_mean").value = "0.086";
-      document.getElementById("id_compactness_mean").value = "0.05943";
-      document.getElementById("id_concavity_mean").value = "0.01588";
-      document.getElementById("id_concave_points_mean").value = "0.005917";
-      document.getElementById("id_symmetry_mean").value = "0.1769";
-      document.getElementById("id_fractal_dimension_mean").value = "0.06503";
-      document.getElementById("id_radius_se").value = "0.1563";
-      document.getElementById("id_texture_se").value = "0.9567";
-      document.getElementById("id_perimeter_se").value = "1.094";
-      document.getElementById("id_area_se").value = "8.205";
-      document.getElementById("id_smoothness_se").value = "0.008968";
-      document.getElementById("id_compactness_se").value = "0.01646";
-      document.getElementById("id_concavity_se").value = "0.01588";
-      document.getElementById("id_concave_points_se").value = "0.005917";
-      document.getElementById("id_symmetry_se").value = "0.02574";
-      document.getElementById("id_fractal_dimension_se").value = "0.002582";
-      document.getElementById("id_radius_worst").value = "8.964";
-      document.getElementById("id_texture_worst").value = "21.96";
-      document.getElementById("id_perimeter_worst").value = "57.26";
-      document.getElementById("id_area_worst").value = "242.2";
-      document.getElementById("id_smoothness_worst").value = "0.1297";
-      document.getElementById("id_compactness_worst").value = "0.1357";
-      document.getElementById("id_concavity_worst").value = "0.0688";
-      document.getElementById("id_concave_points_worst").value = "0.02564";
-      document.getElementById("id_symmetry_worst").value = "0.3105";
-      document.getElementById("id_fractal_dimension_worst").value = "0.07409";
-
-      };
-
-      // set the place of the button
-      document.getElementById('button_b').appendChild(button);
-    };
-</script>
-
-  </body>
+			  // set the place of the button
+			  document.getElementById('button_b').appendChild(button);
+			};
+		</script>
+	</body>
 </html>

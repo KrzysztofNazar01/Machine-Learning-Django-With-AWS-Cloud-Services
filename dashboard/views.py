@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect
 from .forms import DataForm
 from .models import Data
 
-# Create your views here.
-
 
 def index(request):
     if request.method == 'POST':
